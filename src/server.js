@@ -5,7 +5,21 @@ const { PREFIX } = require('../config.json');
 // Require the necessary discord.js classes
 const { Client, Collection, Intents } = require('discord.js');
 const fs = require('fs');
+const https = require('https');
+const express = require('express');
+const app = express();
 const { DisTube } = require('distube');
+
+app.get('/', (_, res) => {
+  return res.status(200).json({
+    status: 200,
+    message: 'Server is running',
+  });
+});
+const timer = 25 * 60 * 1000; // 25 minutes
+setInterval(() => {
+  https.get(`https://discord-tutorial.herokuapp.com/`);
+}, timer);
 
 // Create a new client instance
 const client = new Client({
