@@ -1,0 +1,27 @@
+{
+  "name": "discord-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ntdat",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "deploy": "node src/deploy-commands.js",
+    "prettier": "prettier --config .prettierrc --write src"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.6.0",
+    "distube": "^3.2.0",
+    "dotenv": "^14.2.0",
+    "ffmpeg-static": "^4.4.1",
+    "libsodium-wrappers": "^0.7.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
