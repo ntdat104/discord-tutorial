@@ -13,13 +13,17 @@ const { DisTube } = require('distube');
 app.get('/', (_, res) => {
   return res.status(200).json({
     status: 200,
-    message: 'Server is running',
+    message: 'Wake up Heroku successfully!',
   });
 });
 const timer = 25 * 60 * 1000; // 25 minutes
 setInterval(() => {
   https.get(`https://discord-tutorial.herokuapp.com/`);
 }, timer);
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server is running');
+});
 
 // Create a new client instance
 const client = new Client({
