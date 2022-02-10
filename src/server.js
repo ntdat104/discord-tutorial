@@ -85,6 +85,10 @@ client.on('messageCreate', (message) => {
     client.commands.get('clear').execute(message, args);
   }
 
+  if (command === 'meeting') {
+    client.commands.get('meeting').execute(message, args);
+  }
+
   if (command === 'rules') {
     client.commands.get('rules').execute(message, args);
   }
