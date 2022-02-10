@@ -16,9 +16,7 @@ module.exports = {
     const exampleEmbed = new MessageEmbed()
       .setColor('#0099ff')
       .setTitle(
-        `(${today.getDate()}/${
-          today.getMonth() + 1
-        }/${today.getFullYear()}, ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()})\nSimplize vừa tạo cuộc họp trong vòng ${
+        `(${today.toLocaleDateString(`en-GB`)}, ${today.toLocaleTimeString()})\nSimplize vừa tạo cuộc họp trong vòng ${
           args[0]
         } phút.`
       )
